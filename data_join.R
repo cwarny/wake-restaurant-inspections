@@ -12,4 +12,5 @@ df$PHONE_NUMBER <- as.factor(df$PHONE_NUMBER)
 
 df <- df[order(df$BUSINESS_ID, df$DATE_),]
 
-write.csv(df,'data/wake_restaurants.csv',row.names=F,col.names=c("restaurant_id","date","score","type","code","description","name","address","city","state","zip_code","lat","lon","phone_number"))
+colnames(df) <- c("restaurant_id","date","score","type","code","description","name","address","city","state","zip_code","lat","lon","phone_number")
+write.csv(df,'data/wake_restaurants.csv',row.names=F)
