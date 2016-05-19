@@ -22,7 +22,7 @@
 	* `Wake_County_Restaurant_Inspections.csv`
 	* `Wake_County_Restaurant_Violations.csv`
 	* `Wake_County_Restaurants.csv`
-* Place them a `data` folder at the project root
+* Place them in a `data` folder at the project root
 * Run `data_join.R` to merge the data sets. This will create a single data set under the `data` folder with name `wake_restaurants.csv` 
 
 ### Set up Elasticsearch
