@@ -5,7 +5,7 @@ import copy
 
 es = Elasticsearch()
 
-restaurant_fields = ['restaurant_id', 'name', 'city', 'state', 'address', 'phone_number', 'zip_code']
+restaurant_fields = ['restaurant_id', 'name', 'city', 'state', 'address', 'phone_number', 'zip_code', 'lat', 'lon']
 inspection_fields = ['type','date']
 
 with open('data/wake_restaurants.csv') as infile:
@@ -25,8 +25,8 @@ with open('data/wake_restaurants.csv') as infile:
 			for violation in violations
 		]
 
-		if 'restaurant' in inspection and 'coords' in inspection['restaurant']:
-			inspection['restaurant']['coords'] = [float(inspection['restaurant']['coords'][0]), float(inspection['restaurant']['coords'][1])]
+		if 'restaurant' in inspection and 'lon' in inspection['restaurant'] and 'lat' in inspection['restaurant']:
+			inspection['restaurant']['coords'] = [float(inspection['restaurant'].pop('lon')), float(inspection['restaurant'].pop('lat'))]
 
 		es.index(index='wake', doc_type='inspection', body=inspection)
 

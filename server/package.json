@@ -1,0 +1,24 @@
+{
+  "name": "wake-inspections-api",
+  "version": "0.0.0",
+  "description": "REST API for the Wake restaurant inspections data",
+  "private": true,
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Cedric Warny",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "elasticsearch": "^10.0.1",
+    "express": "^4.13.3",
+    "express-jwt": "^3.3.0",
+    "jsonwebtoken": "^5.5.0",
+    "lodash": "^4.0.0",
+    "moment": "^2.10.6",
+    "request": "^2.67.0",
+    "i": "^0.3.3"
+  },
+  "devDependencies": {}
+}

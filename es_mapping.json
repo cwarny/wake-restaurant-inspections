@@ -81,7 +81,7 @@
 			"properties": {
 				"name": { 
 					"type": "string", 
-					"index": "not_analyzed" 
+					"index": "analyzed" 
 				},
 				"address": { 
 					"type": "string", 
